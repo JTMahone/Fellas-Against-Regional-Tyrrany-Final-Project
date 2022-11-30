@@ -25,6 +25,8 @@ func get_input():
 		velocity.y -= speed
 	if Input.is_action_just_released("shoot"):
 		$MuzzleFlash.hide()
+		$Idle.show()
+		$Attack.hide()
 	velocity = velocity.normalized() * speed
 	
 

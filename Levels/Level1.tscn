@@ -22,6 +22,7 @@ margin_bottom = 249.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 439, 201 )
+
 collision_layer = 2
 collision_mask = 2
 
@@ -29,3 +30,4 @@ collision_mask = 2
 position = Vector2( 573, -20 )
 
 [node name="Effects" type="Node2D" parent="."]
+

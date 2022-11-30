@@ -1,4 +1,5 @@
-extends KinematicBody2D
+extends Node2D
+
 
 var y_positions = [50,100,150,450,500]
 var initial_position = Vector2.ZERO
@@ -7,8 +8,11 @@ var wobble = 10.0
 
 export var speed = 350
 
-func _ready():
-	pass
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
 
 func _physics_process(_delta):
 	position += direction
@@ -17,6 +21,11 @@ func _physics_process(_delta):
 		direction = -direction
 func die():
 	queue_free()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
 
 
 func _on_Area2D_body_entered(body):
