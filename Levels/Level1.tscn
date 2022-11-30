@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.5, 42 )
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 1026, 4, 1024, 598, 768, 242, 768, 156, 2, 1, 689, 158, -4, 596, 689, 251 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 2, 1, 6, 7 ), PoolIntArray( 7, 6, 4, 5 ) ]
+outlines = [ PoolVector2Array( 1024, 598, -4, 596, 2, 1, 1026, 4 ), PoolVector2Array( 768, 242, 768, 156, 689, 158, 689, 251 ) ]
 
 [node name="Level1" type="Node2D"]
 
@@ -23,5 +28,10 @@ margin_bottom = 249.0
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 439, 201 )
 
-[node name="Carrot1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 542, -24 )
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 2 )
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 227, -4 )
