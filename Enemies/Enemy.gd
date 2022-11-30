@@ -1,20 +1,21 @@
-extends Node2D
+extends KinematicBody2D
 
+var player = get_node_or_null("res://Player/Player.tscn")
+export var speed = 350
+onready var tween = get_node("Tween")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
+
+func _physics_process(_delta):
+	tween.interpolate_property($Area2D,"position",Vector2(0, 0), Vector2(100, 100), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+
+func die():
+	queue_free()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Area2D_body_entered(body):
+	if body.name == "Player":
+		die()
 
-
-func _on_Area2D_body_entered(_body):
-	$CarrotSprite.hide()
