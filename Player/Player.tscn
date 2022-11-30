@@ -13,5 +13,11 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -1.5 )
 shape = SubResource( 1 )
+
+[node name="MuzzleFlash" type="ColorRect" parent="."]
+visible = false
+margin_left = 32.0
+margin_top = -9.0
+margin_right = 54.0
+margin_bottom = 4.0
