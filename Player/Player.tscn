@@ -25,12 +25,6 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="MuzzleFlash" type="ColorRect" parent="."]
-margin_left = 31.0
-margin_top = -9.0
-margin_right = 53.0
-margin_bottom = 4.0
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]

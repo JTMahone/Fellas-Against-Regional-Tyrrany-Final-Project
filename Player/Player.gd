@@ -24,7 +24,6 @@ func get_input():
 	if Input.is_action_pressed("up"):
 		velocity.y -= speed
 	if Input.is_action_just_released("shoot"):
-		$MuzzleFlash.hide()
 		$Idle.show()
 		$Attack.hide()
 	velocity = velocity.normalized() * speed
@@ -35,7 +34,6 @@ func _physics_process(_delta):
 	velocity = move_and_slide(velocity)
 	if Input.is_action_just_pressed("shoot"):
 		var Effects = get_node_or_null("/root/Level1/Effects")
-		$MuzzleFlash.show()
 		if Effects != null:
 			var bullet = Bullet.instance()
 			bullet.global_position = global_position + nose.rotated(rotation)
