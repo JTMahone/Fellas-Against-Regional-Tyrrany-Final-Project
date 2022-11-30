@@ -1,16 +1,26 @@
 extends Node
 
-
+var VP = Vector2.ZERO
+var lives = 3
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pause_mode = Node.PAUSE_MODE_PROCESS
+	VP = get_viewport().size
+	var _signal = get_tree().get_root().connect("size_changed", self, "_resize")
+
+func _resize():
+	VP = get_viewport().size
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func update_lives(l):
+	lives += l
+	var hud = get_node_or_null("/root/Game/UI/HUD")
+	if hud != null:
+		if lives > 0:
+			hud.update_lives()
+		else:
+			var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
