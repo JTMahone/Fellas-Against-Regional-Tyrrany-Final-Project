@@ -1,37 +1,40 @@
-
-[gd_scene load_steps=5 format=2]
-
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Assets/carrot_of_war_0000_Layer-2.png" type="Texture" id=2]
 [ext_resource path="res://Assets/carrot_of_war_0001_Layer-3.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 58, 73 )
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.5, 51.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 58, 70 )
-
+extents = Vector2( 41, 49.5 )
 
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="CarrotSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 372, 225 )
-scale = Vector2( 0.418732, 0.418732 )
-frames = SubResource( 2 )
-animation = "attack"
+position = Vector2( 348.5, 205 )
+scale = Vector2( 0.221925, 0.231626 )
+frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 373, 218 )
+position = Vector2( 348.5, 205.5 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 4, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 367, 219 )
+position = Vector2( 345, 207.5 )
 shape = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]

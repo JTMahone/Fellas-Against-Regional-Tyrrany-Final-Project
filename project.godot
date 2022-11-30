@@ -14,6 +14,10 @@ config/name="Fellas-Against-Regional-Tyrrany-Final-Project"
 run/main_scene="res://UI/Main_Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

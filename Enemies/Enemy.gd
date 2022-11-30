@@ -1,16 +1,20 @@
 extends KinematicBody2D
 
-var player = get_node_or_null("res://Player/Player.tscn")
+var y_positions = [50,100,150,450,500]
+var initial_position = Vector2.ZERO
+var direction = Vector2(1.5,0)
+var wobble = 10.0
+
 export var speed = 350
-onready var tween = get_node("Tween")
 
 func _ready():
 	pass
 
 func _physics_process(_delta):
-	tween.interpolate_property($Area2D,"position",Vector2(0, 0), Vector2(100, 100), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	tween.start()
-
+	position += direction
+	position.y = initial_position.y - sin(position.x/20)*wobble
+	if position.x >= 1200:
+		direction = -direction
 func die():
 	queue_free()
 
@@ -18,4 +22,6 @@ func die():
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		die()
+	else:
+		direction = -direction
 

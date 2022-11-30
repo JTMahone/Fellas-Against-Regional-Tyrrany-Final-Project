@@ -16,8 +16,12 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="MuzzleFlash" type="ColorRect" parent="."]
-visible = false
-margin_left = 32.0
+margin_left = 31.0
 margin_top = -9.0
-margin_right = 54.0
+margin_right = 53.0
 margin_bottom = 4.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -28, -30, -29, 30, 28, 29, 30, -28 )
