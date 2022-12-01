@@ -4,6 +4,7 @@ var velocity = Vector2.ZERO
 var speed = 500.0
 var damage = 1.0
 var face = Vector2.ZERO
+
 onready var player = get_node("/root/Level1/Player")
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,10 +23,10 @@ func _on_Timer_timeout():
 
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Box1":
+	if "Box" in body.name:
 		queue_free()
 	if body.name == "Player":
-		pass
+		queue_free()
 	if body.name == "Enemy":
 		queue_free()
-		body.die()
+		body.damage(1)
