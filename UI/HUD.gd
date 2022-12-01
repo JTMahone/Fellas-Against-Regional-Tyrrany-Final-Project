@@ -10,3 +10,5 @@ func _ready():
 func update_score():
 	$Score.text = "Score: " + str(Global.score)
 
+func update_health():
+	$health.text = "health: " + str(Global.health)

@@ -124,3 +124,10 @@ margin_left = 99.0
 margin_top = 2.0
 margin_right = 253.0
 margin_bottom = 75.0
+
+[node name="health" type="Label" parent="ui/HUD"]
+margin_left = 925.0
+margin_top = 1.0
+margin_right = 965.0
+margin_bottom = 15.0
+align = 2

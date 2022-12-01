@@ -22,3 +22,8 @@ func update_score(s):
 	if hud != null:
 		hud.update_score()
 
+func update_health(l):
+	health += l
+	var health = get_node_or_null("/root/Levels/Level1/ui/HUD/health")
+	if health != null:
+		health.text = "health: " + str(health)
