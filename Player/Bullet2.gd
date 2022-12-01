@@ -5,7 +5,7 @@ var speed = 500.0
 var damage = 1.0
 var face = Vector2.ZERO
 
-onready var player = get_node("/root/Level1/Player")
+onready var player = get_node("/root/Level2/Player")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	global_position = Vector2(player.global_position.x + 40,player.global_position.y)
