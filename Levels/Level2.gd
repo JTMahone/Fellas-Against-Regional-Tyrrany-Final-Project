@@ -10,7 +10,9 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
+
 func _process(_delta):
 	if not $Enemy and not $Enemy2:
 		if $Door:
 			$Door.queue_free()
+

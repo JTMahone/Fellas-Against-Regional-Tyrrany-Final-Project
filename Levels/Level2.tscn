@@ -1,7 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enviroment/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Level2.gd" type="Script" id=3]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=4]
 
 [node name="Level2" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 438, 162 )
+
+[node name="Door" parent="." instance=ExtResource( 2 )]
+position = Vector2( 446, -3 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 731, 239 )
+initial_position = Vector2( 731, 239 )
+
+[node name="Effects" type="Node2D" parent="."]

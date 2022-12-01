@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Gunshot.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.5, 30.5 )
+extents = Vector2( 48.0066, 29.2499 )
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 1.39564, 1.39287 )
@@ -24,13 +24,16 @@ scale = Vector2( 0.106, 0.106 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.88169, -1.25013 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( -28, -30, -29, 30, 28, 29, 30, -28 )
+polygon = PoolVector2Array( -28, -30, -42.991, 5.02559, -29, 30, 32.9598, 30.1536, 56.6049, -13.6409, 35.8259, -27.9997 )
 
 [node name="BulletSoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -5.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
