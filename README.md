@@ -43,5 +43,5 @@ Shooting gun in any direction
 # Created by: Group Name
 Lucas De Moya: Original Sound Assets created using resources from freesound.org
 Jack Mahomey: Orginial Art assets
-Colin Hans Game Code
+Colin Hans: Game Code
 Max Hanen: UI/HUD/Start-Game
