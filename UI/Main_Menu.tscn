@@ -36,8 +36,12 @@ color = Color( 0, 0, 0, 0.470588 )
 anchor_right = 1.0
 margin_bottom = 400.0
 custom_fonts/font = SubResource( 1 )
+<<<<<<< HEAD
+text = "It's time for dinner!"
+=======
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Welcome to our game!"
+>>>>>>> 193fc4f1e817438c9e267478043af35e56b5fde9
 align = 1
 valign = 1
 
