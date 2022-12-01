@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet.png-4c3a60f3b94fcc693bdb889fe34d5669.stex"
+path="res://.import/carrot_remains.png-2368e125c44b54997d5e7cf72aafb832.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bullet.png"
-dest_files=[ "res://.import/bullet.png-4c3a60f3b94fcc693bdb889fe34d5669.stex" ]
+source_file="res://Assets/carrot_remains.png"
+dest_files=[ "res://.import/carrot_remains.png-2368e125c44b54997d5e7cf72aafb832.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true
