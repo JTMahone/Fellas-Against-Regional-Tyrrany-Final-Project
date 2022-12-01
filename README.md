@@ -11,11 +11,17 @@ Objective:
 destroy all the vegeyables stopping you from making dinner. 
 
 Game-play instructions:
+
 Left: A
+
 Right: D
+
 Down: S
+
 Up: W
+
 Fire Gun: Left-mouse click
+
 Collect vegatable remains to increase your score!
 
 ## Impediments
