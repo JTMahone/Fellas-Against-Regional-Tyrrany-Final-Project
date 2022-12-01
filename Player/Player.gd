@@ -23,6 +23,9 @@ func get_input():
 		velocity.y += speed
 	if Input.is_action_pressed("up"):
 		velocity.y -= speed
+	if Input.is_action_just_pressed("shoot"):
+		$Idle.hide()
+		$Attack.show()
 	if Input.is_action_just_released("shoot"):
 		$Idle.show()
 		$Attack.hide()
