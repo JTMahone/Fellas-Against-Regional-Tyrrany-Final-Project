@@ -100,14 +100,6 @@ position = Vector2( 542, 542 )
 collision_layer = 3
 collision_mask = 3
 
-[node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 146, 430 )
-initial_position = Vector2( 729, 336 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 950, 151 )
-initial_position = Vector2( 950, 151 )
-
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 547, 291 )
 current = true
@@ -131,3 +123,13 @@ margin_top = 1.0
 margin_right = 965.0
 margin_bottom = 15.0
 align = 2
+
+[node name="Enemy_Container" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemy_Container" instance=ExtResource( 2 )]
+position = Vector2( 146, 430 )
+initial_position = Vector2( 729, 336 )
+
+[node name="Enemy2" parent="Enemy_Container" instance=ExtResource( 2 )]
+position = Vector2( 950, 151 )
+initial_position = Vector2( 950, 151 )
