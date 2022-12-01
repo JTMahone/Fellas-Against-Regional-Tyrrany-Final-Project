@@ -8,7 +8,14 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	randomize()
+	var musicChoice = randi() % 3
+	if musicChoice == 0:
+		$Music1.playing = true
+	if musicChoice == 1:
+		$Music2.playing = true
+	if musicChoice == 2:
+		$Music3.playing = true
 
 func _process(_delta):
 	var Door = get_node_or_null("/root/Level1/Door")
@@ -16,3 +23,36 @@ func _process(_delta):
 		var Enemy_Container = get_node_or_null("/root/Level1/Enemy_Container")
 		if Enemy_Container != null and Enemy_Container.get_child_count() == 0:
 			Door.queue_free()
+
+
+func _on_Music1_finished():
+	randomize()
+	var musicChoice = randi() % 3
+	if musicChoice == 0:
+		$Music1.playing = true
+	if musicChoice == 1:
+		$Music2.playing = true
+	if musicChoice == 2:
+		$Music3.playing = true
+
+
+func _on_Music2_finished():
+	randomize()
+	var musicChoice = randi() % 3
+	if musicChoice == 0:
+		$Music1.playing = true
+	if musicChoice == 1:
+		$Music2.playing = true
+	if musicChoice == 2:
+		$Music3.playing = true
+
+
+func _on_Music3_finished():
+	randomize()
+	var musicChoice = randi() % 3
+	if musicChoice == 0:
+		$Music1.playing = true
+	if musicChoice == 1:
+		$Music2.playing = true
+	if musicChoice == 2:
+		$Music3.playing = true
