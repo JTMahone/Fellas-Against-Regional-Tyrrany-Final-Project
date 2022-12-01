@@ -33,7 +33,7 @@ func get_input():
 	velocity = velocity.normalized() * speed
 	
 func damage(d):
-	Global.health -= d
+	Global.update_health(-d)
 	if Global.health <= 0:
 		Global.score -= 100
 		queue_free()

@@ -23,13 +23,11 @@ func _physics_process(_delta):
 func damage(d):
 	health -= d
 	if health <= 0:
-		Global.update_score(100)
 		var Effects = get_node_or_null("/root/Level1/Effects")
 		if Effects != null:
 			var drop = CarrotDrop.instance()
 			drop.global_position = global_position
 			Effects.add_child(drop)
-			Global.update_score(100)
 		Global.update_score(100)
 		queue_free()
 
