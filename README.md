@@ -18,30 +18,41 @@ Fire Gun: Left-mouse click
 Collect vegatable remains to increase your score!
 
 ## Impediments
+
 Issues with pushing/committing 
+
 Coding problems
 
 ## Implementation
+
 Endless gameplay
+
 Collecting enemy remains
- 
-Features
-Assets, or resources used
+
 
 ## References
 https://www.istockphoto.com/photo/fresh-fruits-and-vegetables-gm589415708-101211749
+
 Original Sounds
+
 Original Art 
 
 ## Future Development
+
 More levels
+
 Variations in SFX
+
 More Enemies
+
 Shooting gun in any direction 
 
 
 # Created by: Group Name
 Lucas De Moya: Original Sound Assets created using resources from freesound.org
+
 Jack Mahomey: Orginial Art assets
-Colin Hans: Game Code
+
+Colin Hans Game Code
+
 Max Hanen: UI/HUD/Start-Game
