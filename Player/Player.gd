@@ -30,6 +30,8 @@ func get_input():
 	if Input.is_action_just_released("shoot"):
 		$Idle.show()
 		$Attack.hide()
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
 	velocity = velocity.normalized() * speed
 	
 func damage(d):
